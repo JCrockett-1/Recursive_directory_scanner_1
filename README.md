@@ -2,7 +2,7 @@
 
 This is a recursive directory scanner using node.js in TypeScript. I used this as a way to demonstrate both my TypeScript and JavaScript learning, programmed in Visual Studio Code pushed via Github.
 
-[Software Demo Video](http://youtube.link.goes.here)
+[Software Demo Video](https://youtu.be/kUoGb0JXN28)
 
 # Development Environment
 
