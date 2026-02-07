@@ -1,4 +1,5 @@
 // here I import a number of things. Readdir lets me read files in a directory, stat helps tell me if it's a file or a folder, and join makes it easy to add to the path
+import { readdir } from 'fs/promises';
 import { stat } from 'fs/promises';
 import { join } from 'path';
 
