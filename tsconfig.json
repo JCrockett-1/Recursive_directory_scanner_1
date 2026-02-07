@@ -1,7 +1,6 @@
 {
   "compilerOptions": {
     "target": "ES2020",
-<<<<<<< HEAD
     "module": "NodeNext",
     "moduleResolution": "NodeNext",
     "outDir": "./dist",
@@ -16,14 +15,3 @@
     "sourceMap": false   
   }       
 }
-=======
-    "module": "CommonJS",
-    "strict": true,
-    "esModuleInterop": true,
-    "rootDir": "src",
-    "outDir": "dist"
-  },
-  "include": ["src/**/*.ts"],
-  "exclude": ["node_modules", "dist"]
-}
->>>>>>> f94f40d9c381cab9f0fd2058f5c45c42762ecfd0
