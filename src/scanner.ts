@@ -1,8 +1,6 @@
-// here I import a number of things. Readdir lets me read files in a directory, stat helps tell me if it's a file or a folder, join makes it easy to add to the path, and basename will help me display the final file in a path to display in a tree like fashion
-import { readdir } from 'fs/promises';
+// here I import a number of things. Readdir lets me read files in a directory, stat helps tell me if it's a file or a folder, and join makes it easy to add to the path
 import { stat } from 'fs/promises';
 import { join } from 'path';
-import { basename } from 'path';
 
 // creates scanner class with rootDir which will take the user inputted directory, and the function scan within
 export class Scanner {
