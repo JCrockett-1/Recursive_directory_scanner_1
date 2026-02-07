@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // here I import a number of things. Readdir lets me read files in a directory, stat helps tell me if it's a file or a folder, join makes it easy to add to the path, and basename will help me display the final file in a path to display in a tree like fashion
 import { readdir } from 'fs/promises';
 import { stat } from 'fs/promises';
@@ -66,39 +65,5 @@ export class Scanner {
         console.log(`Files: ${this.fileCount}`)
         console.log(`Folders: ${this.folderCount}`)
         console.log(`Access Denied: ${this.noPermissionCount}`)
-=======
-import { readdir } from 'fs/promises';
-import { stat } from 'fs/promises';
-import { join } from 'path';
-
-export class Scanner {
-    rootDirectory: string;
-
-    constructor (rootDirectory: string) {
-        this.rootDirectory = rootDirectory;
-    }
-
-    public async scan(): Promise<string[]> {
-        
-        const entries = await readdir(this.rootDirectory);
-        const files: string[] = [];
-
-        for (let i = 0; i < entries.length; i++) {
-            const fullPath = join(this.rootDirectory, entries[i]);
-            const characteristic = await stat(fullPath);
-
-            if(characteristic.isDirectory()) {
-                const secondScanner = new Scanner(fullPath);
-                const secondFiles = await secondScanner.scan();
-
-                for (let j = 0; j <secondFiles.length; j++) {
-                    files.push(secondFiles[j]);
-                }
-            } else {
-                files.push(fullPath);
-            }
-        }
-        return files;
->>>>>>> f94f40d9c381cab9f0fd2058f5c45c42762ecfd0
     }
 }

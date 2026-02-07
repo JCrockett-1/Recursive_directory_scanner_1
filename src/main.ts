@@ -1,17 +1,13 @@
-<<<<<<< HEAD
 // this allows input to be read and for the Scanner class to be accessed in the main file
 import readline from 'readline';
 import { Scanner } from './scanner.js';
 
 // creates readline interface to receive input
-=======
->>>>>>> f94f40d9c381cab9f0fd2058f5c45c42762ecfd0
 const rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout
 });
 
-<<<<<<< HEAD
 // creates main function which creates a Scanner with user input and calls Scan()
 function main () {
     console.log('Hello! Welcome to my Recursive Directory Scanner!')
@@ -47,7 +43,4 @@ function main () {
 }
 
 // calls main()
-=======
-
->>>>>>> f94f40d9c381cab9f0fd2058f5c45c42762ecfd0
 main();
