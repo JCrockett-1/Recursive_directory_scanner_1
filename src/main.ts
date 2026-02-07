@@ -5,13 +5,6 @@ import { Scanner } from './scanner.js';
 
 // creates readline interface to receive input
 =======
-// imports readline to recieve user input and class Scanner
-import readline from 'readline';
-import { Scanner } from './scanner.js';
-
-// welcomes user to the directory scanner
-console.log('Welcome to my Directory Scanner!');
-
 >>>>>>> f94f40d9c381cab9f0fd2058f5c45c42762ecfd0
 const rl = readline.createInterface({
   input: process.stdin,
@@ -55,18 +48,6 @@ function main () {
 
 // calls main()
 =======
-function main() {
-  rl.question('Enter a directory a directory to scan: ', async function (input) {
-    console.log('You chose: ', input);
-
-    const scanner = new Scanner(input);
-    const files = await scanner.scan();
-
-    console.log('Files in directory: ');
-    files.forEach(function(file) {
-      console.log(file);
-    });
-});}
 
 >>>>>>> f94f40d9c381cab9f0fd2058f5c45c42762ecfd0
 main();
