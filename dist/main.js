@@ -1,13 +1,8 @@
-"use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", { value: true });
 // this allows input to be read and for the Scanner class to be accessed in the main file
-const readline_1 = __importDefault(require("readline"));
-const scanner_js_1 = require("./scanner.js");
+import readline from 'readline';
+import { Scanner } from './scanner.js';
 // creates readline interface to receive input
-const rl = readline_1.default.createInterface({
+const rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout
 });
@@ -17,7 +12,7 @@ function main() {
     function directoryScan() {
         rl.question('Enter a directory to scan: ', async function (input) {
             try {
-                const scanner = new scanner_js_1.Scanner(input);
+                const scanner = new Scanner(input);
                 await scanner.scan();
                 await scanner.displayStats();
             }
